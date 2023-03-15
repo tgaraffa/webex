@@ -100,7 +100,6 @@ framework.hears(
     );
     var msg_attach = {
       text: "This is also threaded reply with an attachment sent via bot.reply(): ",
-      file: "https://media2.giphy.com/media/dTJd5ygpxkzWo/giphy-downsized-medium.gif",
     };
     bot.reply(trigger.message, msg_attach);
   },
