@@ -90,32 +90,19 @@ framework.on("log", (msg) => {
 ex User enters @botname 'reply' phrase, the bot will post a threaded reply
 */
 framework.hears(
-  "next week",
+  "reply",
   (bot, trigger) => {
-    bot.say(
-      trigger.message
-      "Here is the schedule for Next Week, please 'Like' the date you will be in the Office!",
-       );     
-    var msg_attach1 = {
-      text: "Monday",
+    console.log("someone asked for a reply.  We will give them two.");
+    bot.reply(
+      trigger.message,
+      "This is threaded reply sent using the `bot.reply()` method.",
+      "markdown"
+    );
+    var msg_attach = {
+      text: "This is also threaded reply with an attachment sent via bot.reply(): ",
+      file: "https://media2.giphy.com/media/dTJd5ygpxkzWo/giphy-downsized-medium.gif",
     };
-    var msg_attach2 = {
-      text: "Tuesday",
-    };
-    var msg_attach3 = {
-      text: "Wednesday",
-    };
-    var msg_attach4 = {
-      text: "Thursday",
-    };
-    var msg_attach5 = {
-      text: "Friday",
-    };
-    bot.reply(trigger.message, msg_attach1);
-    bot.reply(trigger.message, msg_attach2);
-    bot.reply(trigger.message, msg_attach3);
-    bot.reply(trigger.message, msg_attach4);
-    bot.reply(trigger.message, msg_attach5);
+    bot.reply(trigger.message, msg_attach);
   },
   "**reply**: (have bot reply to your message)",
   0
