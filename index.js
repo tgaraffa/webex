@@ -90,34 +90,42 @@ framework.on("log", (msg) => {
 ex User enters @botname 'reply' phrase, the bot will post a threaded reply
 */
 framework.hears(
-    "next week",
-    (bot, trigger) => {
-      console.log("someone asked for a reply.  We will give them two.");
-      bot.reply(
-        trigger.message,
-        "Here is the schedule for Next Week, please 'Like' the date you will be in the Office!",
-        "markdown"
-      );
-      var msg_attach1 = {
-        text: document.write(today+3),
-      };
-      var msg_attach2 = {
-        text: document.write(today+4),
-      };
-      var msg_attach3 = {
-        text: document.write(today+5),
-      };
-      var msg_attach4 = {
-        text: document.write(today+6),
-      };
-      var msg_attach5 = {
-        text: document.write(today+7),
-      };
-      bot.reply(trigger.message, msg_attach1, msg_attach2, msg_attach3, msg_attach4, msg_attach5);
-    },
-    "**reply**: (have bot reply to your message)",
-    0
-  );
+  "next week",
+  (bot, trigger) => {
+    let Monday = document.write(today+3);
+    let Tuesday = document.write(today+4);
+    let Wednesday = document.write(today+5);
+    let Thursday = document.write(today+6);
+    let Friday = document.write(today+7);
+
+    bot.say(
+      trigger.message
+      "Here is the schedule for Next Week, please 'Like' the date you will be in the Office!",
+       );     
+    var msg_attach1 = {
+      text: Monday,
+    };
+    var msg_attach2 = {
+      text: Tuesday,
+    };
+    var msg_attach3 = {
+      text: Wednesday,
+    };
+    var msg_attach4 = {
+      text: Thursday,
+    };
+    var msg_attach5 = {
+      text: Friday,
+    };
+    bot.reply(trigger.message, msg_attach1);
+    bot.reply(trigger.message, msg_attach2);
+    bot.reply(trigger.message, msg_attach3);
+    bot.reply(trigger.message, msg_attach4);
+    bot.reply(trigger.message, msg_attach5);
+  },
+  "**reply**: (have bot reply to your message)",
+  0
+);
 
 //Server config & housekeeping
 // Health Check
