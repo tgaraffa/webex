@@ -85,6 +85,33 @@ framework.on("log", (msg) => {
 // An optional fourth (or 3rd param if no help message is supplied) is an integer that
 // specifies priority.   If multiple handlers match they will all be called unless the priority
 // was specified, in which case, only the handler(s) with the lowest priority will be called
+framework.hears(
+  "week",
+  (bot) => {
+    bot.say(
+      "markdown",
+      "What day of the week are you coming in?"
+    );
+    bot.reply(
+      "Monday?"
+    );
+    bot.reply(
+      "Tuesday?"
+    );
+    bot.reply(
+      "Wednesday?"
+    );
+    bot.reply(
+      "Thursday?"
+    );    
+    bot.reply(
+      "Friday?"
+    );
+    },
+  "**framework**: (learn more about the Webex Bot Framework)",
+  0
+);
+
 
 /* On mention reply example
 ex User enters @botname 'reply' phrase, the bot will post a threaded reply
