@@ -92,26 +92,32 @@ framework.hears(
       "markdown",
       "What day of the week are you coming in?"
     );
+    },
+  (bot, trigger) => {
     bot.reply(
+      trigger.message,
       "Monday?"
     );
     bot.reply(
+      trigger.message,
       "Tuesday?"
     );
     bot.reply(
+      trigger.message,
       "Wednesday?"
     );
     bot.reply(
+      trigger.message,
       "Thursday?"
     );    
     bot.reply(
+      trigger.message,
       "Friday?"
     );
     },
   "**framework**: (learn more about the Webex Bot Framework)",
   0
 );
-
 
 /* On mention reply example
 ex User enters @botname 'reply' phrase, the bot will post a threaded reply
