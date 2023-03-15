@@ -87,13 +87,11 @@ framework.on("log", (msg) => {
 // was specified, in which case, only the handler(s) with the lowest priority will be called
 framework.hears(
   "week",
-  (bot) => {
+  (bot, trigger) => {
     bot.say(
       "markdown",
       "What day of the week are you coming in?"
     );
-    },
-  (bot, trigger) => {
     bot.reply(
       trigger.message,
       "Monday?"
@@ -118,6 +116,7 @@ framework.hears(
   "**framework**: (learn more about the Webex Bot Framework)",
   0
 );
+
 
 /* On mention reply example
 ex User enters @botname 'reply' phrase, the bot will post a threaded reply
