@@ -92,30 +92,24 @@ ex User enters @botname 'reply' phrase, the bot will post a threaded reply
 framework.hears(
   "next week",
   (bot, trigger) => {
-    let Monday = document.write(today+3);
-    let Tuesday = document.write(today+4);
-    let Wednesday = document.write(today+5);
-    let Thursday = document.write(today+6);
-    let Friday = document.write(today+7);
-
     bot.say(
       trigger.message
       "Here is the schedule for Next Week, please 'Like' the date you will be in the Office!",
        );     
     var msg_attach1 = {
-      text: Monday,
+      text: "Monday",
     };
     var msg_attach2 = {
-      text: Tuesday,
+      text: "Tuesday",
     };
     var msg_attach3 = {
-      text: Wednesday,
+      text: "Wednesday",
     };
     var msg_attach4 = {
-      text: Thursday,
+      text: "Thursday",
     };
     var msg_attach5 = {
-      text: Friday,
+      text: "Friday",
     };
     bot.reply(trigger.message, msg_attach1);
     bot.reply(trigger.message, msg_attach2);
