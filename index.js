@@ -27,7 +27,7 @@ framework.start();
 console.log("Starting framework, please wait...");
 
 framework.on("initialized", () => {
-  console.log("framework is all fired up! [Press CTRL-C to quit]");
+  console.log("framework is pretty much all fired up! [Press CTRL-C to quit]");
 });
 
 // A spawn event is generated when the framework finds a space with your bot in it
