@@ -48,13 +48,13 @@ framework.on("spawn", (bot, id, actorId) => {
     bot.webex.people
       .get(actorId)
       .then((user) => {
-        msg = `Hello there ${user.displayName}. ${msg}`;
+        msg = `Hi there ${user.displayName}. ${msg}`;
       })
       .catch((e) => {
         console.error(
           `Failed to lookup user details in framwork.on("spawn"): ${e.message}`
         );
-        msg = `Hello there. ${msg}`;
+        msg = `Hi there. ${msg}`;
       })
       .finally(() => {
         // Say hello, and tell users what you do!
