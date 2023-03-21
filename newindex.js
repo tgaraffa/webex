@@ -30,31 +30,133 @@ framework.hears(
     let Wed = `${Wednesdaymonth}/${Wednesdayday}`;
     let Thu = `${Thursdaymonth}/${Thursdayday}`;
     let Fri = `${Fridaymonth}/${Fridayday}`;
-
-    var msg_attach1 = {
-      text: `${Mon}`,
-    };
-    bot.reply(trigger.message, msg_attach1);
     
-    var msg_attach2 = {
-      text: `${Tue}`,
-    };
-    bot.reply(trigger.message, msg_attach2);
+    const card = {
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 35,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": `Monday ${Mon}`,
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": `Tuesday ${Tue}`,
+                            "color": "Light"
+                        },
+                        {
+                             "type": "TextBlock",
+                            "text": `Wednesday ${Wed}`,
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": `Thursday ${Thu}`,
+                            "color": "Light"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": `Friday ${Fri}`,
+                            "color": "Light"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": 65,
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Signup"
+                                }
+                            ],
+                          "horizontalAlignment": "Center",
+                        },
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Signup"
+                                }
+                            ],
+                          "horizontalAlignment": "Center",
+                        },
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Signup"
+                                }
+                            ],
+                          "horizontalAlignment": "Center",
+                        },
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Signup"
+                                }
+                            ],
+                          "horizontalAlignment": "Center",
+                        },
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Signup"
+                                }
+                            ],
+                          "horizontalAlignment": "Center",
+                        },
+                        
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
 
-    var msg_attach3 = {
-      text: `${Wed}`,
-    };
-    bot.reply(trigger.message, msg_attach3);
+//     var msg_attach1 = {
+//       text: `${Mon}`,
+//     };
+//     bot.reply(trigger.message, msg_attach1);
+    
+//     var msg_attach2 = {
+//       text: `${Tue}`,
+//     };
+//     bot.reply(trigger.message, msg_attach2);
 
-    var msg_attach4 = {
-      text: `${Thu}`,
-    };
-    bot.reply(trigger.message, msg_attach4);
+//     var msg_attach3 = {
+//       text: `${Wed}`,
+//     };
+//     bot.reply(trigger.message, msg_attach3);
 
-    var msg_attach5 = {
-      text: `${Fri}`,
-    };
-    bot.reply(trigger.message, msg_attach5);
+//     var msg_attach4 = {
+//       text: `${Thu}`,
+//     };
+//     bot.reply(trigger.message, msg_attach4);
+
+//     var msg_attach5 = {
+//       text: `${Fri}`,
+//     };
+//     bot.reply(trigger.message, msg_attach5);
+    bot.reply(trigger.message, card);
   },
   "**reply**: (have bot reply to your message)",
   0
