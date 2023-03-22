@@ -5,22 +5,22 @@ framework.hears(
     let monday, tuesday, wednesday, thursday, friday;
     function getWeekFunction(d) {
         return new Promise(function(resolve, reject){
-        d = new Date(d);
-        let day = d.getDay();
-        let diff = d.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
-        monday = d.getMonth() + 1 + '/' + diff;
-        tuesday = d.getMonth() + 1 + '/' + (diff + 1);
-        wednesday = d.getMonth() + 1 + '/' + (diff + 2);
-        thursday = d.getMonth() + 1 + '/' + (diff + 3);
-        friday = d.getMonth() + 1 + '/' + (diff + 4);
-        resolve();
+          d = new Date(d);
+          let day = d.getDay();
+          let diff = d.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
+          monday = d.getMonth() + 1 + '/' + diff;
+          tuesday = d.getMonth() + 1 + '/' + (diff + 1);
+          wednesday = d.getMonth() + 1 + '/' + (diff + 2);
+          thursday = d.getMonth() + 1 + '/' + (diff + 3);
+          friday = d.getMonth() + 1 + '/' + (diff + 4);
+          resolve();
         });
     }
 
     function getMonday(){
         return new Promise(function(resolve, reject){
             let msg = {
-            text: `${monday}`,
+              text: `${monday}`,
             };
             bot.reply(trigger.message, msg);
             // console.log(monday)
@@ -31,7 +31,7 @@ framework.hears(
     function getTuesday(){
         return new Promise(function(resolve, reject){
             let msg = {
-            text: `${tuesday}`,
+              text: `${tuesday}`,
             };
             bot.reply(trigger.message, msg);
             // console.log(tuesday)
@@ -42,7 +42,7 @@ framework.hears(
     function getWednesday(){
         return new Promise(function(resolve, reject){
             let msg = {
-            text: `${wednesday}`,
+              text: `${wednesday}`,
             };
             bot.reply(trigger.message, msg);
             // console.log(wednesday)
@@ -53,7 +53,7 @@ framework.hears(
     function getThursday(){
         return new Promise(function(resolve, reject){
             let msg = {
-            text: `${thursday}`,
+              text: `${thursday}`,
             };
             bot.reply(trigger.message, msg);
             // console.log(thursday)
@@ -64,7 +64,7 @@ framework.hears(
     function getFriday(){
         return new Promise(function(resolve, reject){
             let msg = {
-            text: `${friday}`,
+              text: `${friday}`,
             };
             bot.reply(trigger.message, msg);
             // console.log(friday)
