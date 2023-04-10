@@ -383,7 +383,7 @@ framework.hears(
 //Server config & housekeeping
 // Health Check
 app.get("/", (req, res) => {
-  res.send(`I'm alive.`);
+  res.send(`I'm alive again.`);
 });
 
 app.post("/", webhook(framework));
